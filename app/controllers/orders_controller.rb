@@ -1,5 +1,9 @@
 class OrdersController < ApplicationController
 
+    def index
+        @orders = Order.all
+    end
+
     def new
         @order = Order.new
     end
@@ -19,7 +23,7 @@ class OrdersController < ApplicationController
     private 
 
     def order_params
-        params.require(:order).permit(:name, :email, :address, :phone, :message)
+        params.require(:order).permit(:name, :email, :address, :phone, :message, :avatar)
     end
 
 end

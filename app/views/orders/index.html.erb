@@ -1,0 +1,7 @@
+<% @orders.each do |order| %>
+
+    <% if order.avatar.attached? %>
+        <image src="<%= (url_for(order.avatar)) %>" >
+    <% end %>
+
+<% end %>

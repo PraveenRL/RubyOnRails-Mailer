@@ -19,6 +19,10 @@
         <%= f.label :message %>
         <%= f.text_field :message %>
     </div>
+    <div>
+        <%= f.label "Profile Photo" %>
+        <%= f.file_field :avatar %>
+    </div>
 
     <%= f.submit %>
 <% end %>
